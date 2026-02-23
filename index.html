@@ -49,8 +49,8 @@
             <div class="flex justify-between py-2 md:py-3 items-center min-h-[5rem]">
                 <!-- Logo Ajustado y mucho más visible -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <!-- Se usa w-44 para celular y w-64 para PC. mix-blend-multiply vuelve el fondo de tu logo transparente -->
-                    <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="w-44 md:w-64 lg:w-72 h-auto object-contain mix-blend-multiply" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                    <!-- Se usa logo.png y se eliminó mix-blend-multiply porque ya es transparente -->
+                    <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="w-44 md:w-64 lg:w-72 h-auto object-contain drop-shadow-sm transition-transform hover:scale-105" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -395,9 +395,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                 <div>
                     <div class="flex items-center mb-6">
-                        <!-- Logo en el Footer también más grande y limpio -->
-                        <div class="bg-white p-3 rounded-2xl inline-flex items-center justify-center">
-                            <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="w-48 md:w-60 h-auto object-contain mix-blend-multiply" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                        <!-- Logo en el Footer: Mantenemos la caja blanca para que el texto negro del logo no se pierda en el fondo oscuro -->
+                        <div class="bg-white p-3.5 rounded-2xl inline-flex items-center justify-center shadow-lg">
+                            <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="w-48 md:w-60 h-auto object-contain" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                         </div>
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed pr-4">
