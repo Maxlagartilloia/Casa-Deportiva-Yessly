@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Deportiva Yessly | Uniformes y Accesorios</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b', // Slate 800
+                        secondary: '#dc2626', // Red 600
+                        accent: '#f97316', // Orange 500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+        }
+        .img-hover-zoom {
+            transition: transform 0.5s ease;
+        }
+        .group:hover .img-hover-zoom {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-trophy text-secondary text-3xl"></i>
+                    <span class="font-bold text-2xl text-primary tracking-tight">C.D. YESSLY</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-700 hover:text-secondary font-medium transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-secondary font-medium transition-colors">Servicios</a>
+                    <a href="#productos" class="text-gray-700 hover:text-secondary font-medium transition-colors">Accesorios</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-secondary font-medium transition-colors">Contacto</a>
+                    <a href="https://wa.me/593980544824" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-bold transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-secondary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-secondary">Inicio</a>
+                <a href="#servicios" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-secondary">Servicios</a>
+                <a href="#productos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-secondary">Accesorios</a>
+                <a href="#contacto" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-secondary">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Imagen de fondo que se espera en la raíz. Tiene un respaldo por si no existe aún -->
+        <img src="hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1518605368461-1ee7e162528b?auto=format&fit=crop&q=80'" alt="Deportes Yessly Fondo" class="absolute inset-0 w-full h-full object-cover z-0" />
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col items-center md:items-start w-full">
+            <span class="text-secondary font-bold tracking-wider uppercase mb-2 block animate-fade-in">Calidad y Pasión por el Deporte</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 max-w-3xl">
+                CASA DEPORTIVA <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">YESSLY</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light">
+                Especialistas en la confección de uniformes deportivos, escolares y servicio profesional de sublimación. Equipamos a los campeones de Shushufindi.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#servicios" class="bg-secondary hover:bg-red-700 text-white px-8 py-3 rounded-md font-bold text-lg transition-colors shadow-lg shadow-red-500/30">
+                    Nuestros Servicios
+                </a>
+                <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-md font-bold text-lg transition-colors">
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Especializados -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Lo Que Hacemos</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-4 rounded"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Soluciones integrales en indumentaria para tu equipo, colegio o institución con materiales de primera calidad.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="group bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="uniforme-deportivo.jpg" onerror="this.src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80'" alt="Uniformes Deportivos" class="w-full h-full object-cover img-hover-zoom">
+                        <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fa-solid fa-shirt text-secondary text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">Uniformes Deportivos</h3>
+                        <p class="text-gray-600 mb-4">Confección a medida para equipos de fútbol, básquet, voleibol y más. Diseños exclusivos que representan a tu equipo.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="group bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="uniforme-escolar.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80'" alt="Uniformes Escolares" class="w-full h-full object-cover img-hover-zoom">
+                        <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fa-solid fa-graduation-cap text-secondary text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">Uniformes Escolares</h3>
+                        <p class="text-gray-600 mb-4">Venta y confección de uniformes para el diario y educación física. Resistencia y comodidad para el año lectivo.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="group bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="sublimacion.jpg" onerror="this.src='https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80'" alt="Sublimación" class="w-full h-full object-cover img-hover-zoom">
+                        <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fa-solid fa-print text-secondary text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">Sublimación</h3>
+                        <p class="text-gray-600 mb-4">Servicio de sublimación digital de alta resolución. Colores vivos que no se destiñen, ideales para cualquier diseño.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Accesorios -->
+    <section id="productos" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Accesorios Deportivos</h2>
+                    <div class="w-24 h-1 bg-secondary rounded"></div>
+                </div>
+                <p class="text-gray-600 mt-4 md:mt-0 max-w-md md:text-right">
+                    Todo lo que necesitas para saltar a la cancha. Complementa tu uniforme con nuestra variedad de accesorios.
+                </p>
+            </div>
+
+            <!-- Grid de productos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-lg p-4 shadow text-center group cursor-pointer hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200">
+                    <div class="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
+                        <img src="balones.jpg" onerror="this.src='https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&q=80'" alt="Balones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-lg text-primary">Balones</h4>
+                    <p class="text-sm text-gray-500">Fútbol, básquet, indor</p>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-lg p-4 shadow text-center group cursor-pointer hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200">
+                    <div class="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
+                        <img src="canilleras.jpg" onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80'" alt="Canilleras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-lg text-primary">Canilleras</h4>
+                    <p class="text-sm text-gray-500">Protección garantizada</p>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-lg p-4 shadow text-center group cursor-pointer hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200">
+                    <div class="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
+                        <img src="polines.jpg" onerror="this.src='https://images.unsplash.com/photo-1608223689714-c10022d861d8?auto=format&fit=crop&q=80'" alt="Polines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-lg text-primary">Polines</h4>
+                    <p class="text-sm text-gray-500">Varios colores y tallas</p>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="bg-white rounded-lg p-4 shadow text-center group cursor-pointer hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200">
+                    <div class="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
+                        <img src="guantes.jpg" onerror="this.src='https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80'" alt="Guantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-lg text-primary">Guantes</h4>
+                    <p class="text-sm text-gray-500">Para arqueros y más</p>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/593980544824" target="_blank" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-red-800 transition-colors">
+                    Consultar catálogo completo en WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Confianza -->
+    <section class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-gray-700">
+                <div class="p-4">
+                    <i class="fa-solid fa-medal text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Excelente Calidad</h3>
+                    <p class="text-gray-400 text-sm">Materiales duraderos y acabados perfectos.</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-truck-fast text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Entregas Puntuales</h3>
+                    <p class="text-gray-400 text-sm">Cumplimos con los tiempos de entrega acordados.</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-hand-holding-dollar text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Precios Competitivos</h3>
+                    <p class="text-gray-400 text-sm">La mejor relación entre calidad y precio en Shushufindi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contáctanos</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info de contacto y mapa -->
+                <div class="space-y-8">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Información del Local</h3>
+                        
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-red-100 p-3 rounded-full text-secondary mt-1">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Calle: R973+H4J<br>Shushufindi, Ecuador</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-red-100 p-3 rounded-full text-secondary mt-1">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Celular / WhatsApp</h4>
+                                <p class="text-gray-600">0980544824</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-3 rounded-full text-secondary mt-1">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Correo Electrónico</h4>
+                                <p class="text-gray-600 break-all">kevinyumisaca947@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder para Mapa (Se puede reemplazar el iframe con un link real de Google Maps de la ubicación) -->
+                    <div class="h-64 rounded-xl overflow-hidden shadow-md bg-gray-200 relative flex items-center justify-center">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.814349479373!2d-76.666667!3d-0.183333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTEnMDAuMCJTIDc2wrA0MCcwMC4wIlc!5e0!3m2!1ses!2sec!4v1614632537423!5m2!1ses!2sec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                       <div class="absolute top-2 left-2 bg-white px-3 py-1 rounded shadow text-xs font-bold text-primary">Mapa de referencia Shushufindi</div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Envíanos un mensaje</h3>
+                    <form id="contact-form" onsubmit="enviarMensaje(event)">
+                        <div class="space-y-4">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="telefono" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu celular">
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">¿Qué necesitas?</label>
+                                <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none resize-none" required placeholder="Cuéntanos sobre los uniformes o accesorios que buscas..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-secondary hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex justify-center items-center gap-2">
+                                <i class="fa-regular fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </div>
+                        <div id="form-exito" class="hidden mt-4 p-3 bg-green-100 text-green-700 rounded-md text-sm text-center">
+                            ¡Gracias! Hemos recibido tu mensaje, te contactaremos pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/593980544824" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-trophy text-secondary text-2xl"></i>
+                        <span class="font-bold text-xl text-white tracking-tight">C.D. YESSLY</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Vistiendo la pasión del deporte en Shushufindi. Calidad garantizada en confección, sublimación y artículos deportivos.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-secondary transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-secondary transition-colors">Nuestros Servicios</a></li>
+                        <li><a href="#productos" class="hover:text-secondary transition-colors">Catálogo de Accesorios</a></li>
+                        <li><a href="#contacto" class="hover:text-secondary transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Horario de Atención</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Lunes a Viernes: 08:00 AM - 06:00 PM</li>
+                        <li>Sábados: 09:00 AM - 02:00 PM</li>
+                        <li>Domingos: Cerrado</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                &copy; <span id="year"></span> Casa Deportiva Yessly. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Actualizar año del footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menú móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Simular envío de formulario
+        function enviarMensaje(e) {
+            e.preventDefault();
+            const formExito = document.getElementById('form-exito');
+            const btnSubmit = e.target.querySelector('button[type="submit"]');
+            
+            // Simular carga
+            const btnOriginalText = btnSubmit.innerHTML;
+            btnSubmit.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
+            btnSubmit.disabled = true;
+
+            setTimeout(() => {
+                formExito.classList.remove('hidden');
+                e.target.reset();
+                btnSubmit.innerHTML = btnOriginalText;
+                btnSubmit.disabled = false;
+                
+                // Ocultar mensaje después de unos segundos
+                setTimeout(() => {
+                    formExito.classList.add('hidden');
+                }, 4000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
