@@ -41,16 +41,17 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 antialiased bg-light pt-[72px] md:pt-[88px] lg:pt-[104px]">
+<!-- Se ajustó el padding del body al doble para soportar el nuevo tamaño gigante de la barra -->
+<body class="font-sans text-gray-800 antialiased bg-light pt-[120px] md:pt-[152px] lg:pt-[200px]">
 
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-1">
                 
-                <!-- Logo -->
+                <!-- Logo Ajustado al DOBLE del tamaño -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="h-16 md:h-20 lg:h-24 w-auto object-contain drop-shadow-sm transition-transform hover:scale-105" onerror="this.src='https://via.placeholder.com/200x60/ffffff/16a34a?text=C.D.+YESSLY'">
+                    <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="h-28 md:h-36 lg:h-48 w-auto object-contain drop-shadow-sm transition-transform hover:scale-105" onerror="this.src='https://via.placeholder.com/200x60/ffffff/16a34a?text=C.D.+YESSLY'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -84,8 +85,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section (NUEVA ESTRUCTURA DIVIDIDA PARA CELULARES) -->
-    <section id="inicio" class="relative flex flex-col md:flex-row min-h-[calc(100vh-72px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] bg-primary overflow-hidden">
+    <!-- Hero Section (Calculamos el alto de la pantalla menos la nueva barra gigante) -->
+    <section id="inicio" class="relative flex flex-col md:flex-row min-h-[calc(100vh-120px)] md:h-[calc(100vh-152px)] lg:h-[calc(100vh-200px)] bg-primary overflow-hidden">
         
         <!-- Bloque de Imagen: En celular es la mitad de arriba, en PC ocupa todo el fondo -->
         <div class="relative w-full h-[45vh] md:absolute md:inset-0 md:h-full z-0">
