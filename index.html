@@ -285,6 +285,13 @@
                                 <p class="text-gray-600 break-all">kevinyumisaca947@gmail.com</p>
                             </div>
                         </div>
+
+                        <!-- Botón directo a Google Maps -->
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <a href="https://maps.app.goo.gl/WCGUV3RudCwcbqDv7" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex justify-center items-center gap-2 shadow-md">
+                                <i class="fa-solid fa-map-location-dot text-xl"></i> Cómo llegar (Google Maps)
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Placeholder para Mapa (Se puede reemplazar el iframe con un link real de Google Maps de la ubicación) -->
@@ -296,27 +303,59 @@
 
                 <!-- Formulario -->
                 <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-100">
-                    <h3 class="text-2xl font-bold text-primary mb-6">Envíanos un mensaje</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-6">Cotiza tu pedido</h3>
                     <form id="contact-form" onsubmit="enviarMensaje(event)">
                         <div class="space-y-4">
-                            <div>
-                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
-                                <input type="text" id="nombre" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu nombre">
+                            <!-- Fila 1: Nombre y Teléfono (Grid de 2 columnas en PC) -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                                    <input type="text" id="nombre" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu nombre">
+                                </div>
+                                <div>
+                                    <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                                    <input type="tel" id="telefono" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu celular">
+                                </div>
                             </div>
-                            <div>
-                                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                                <input type="tel" id="telefono" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none" required placeholder="Tu celular">
+
+                            <!-- Fila 2: Interés y Cantidad -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="servicio" class="block text-sm font-medium text-gray-700 mb-1">¿Qué buscas?</label>
+                                    <select id="servicio" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none bg-white" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="Uniformes Deportivos">Uniformes Deportivos</option>
+                                        <option value="Uniformes Escolares">Uniformes Escolares</option>
+                                        <option value="Servicio de Sublimación">Servicio de Sublimación</option>
+                                        <option value="Accesorios (Balones, etc.)">Accesorios Deportivos</option>
+                                        <option value="Otro">Otro / Consulta general</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="cantidad" class="block text-sm font-medium text-gray-700 mb-1">Cantidad estimada</label>
+                                    <select id="cantidad" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none bg-white" required>
+                                        <option value="" disabled selected>Selecciona la cantidad</option>
+                                        <option value="1 a 5 unidades (Individual)">1 a 5 unidades (Individual)</option>
+                                        <option value="6 a 15 unidades (Medio equipo)">6 a 15 unidades</option>
+                                        <option value="15 a 30 unidades (Equipo completo)">15 a 30 unidades (Equipo completo)</option>
+                                        <option value="Más de 30 unidades (Mayorista)">Más de 30 unidades</option>
+                                        <option value="Aún no lo sé">Aún no lo sé</option>
+                                    </select>
+                                </div>
                             </div>
+
+                            <!-- Fila 3: Detalles -->
                             <div>
-                                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">¿Qué necesitas?</label>
-                                <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none resize-none" required placeholder="Cuéntanos sobre los uniformes o accesorios que buscas..."></textarea>
+                                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Detalles de tu idea o pedido</label>
+                                <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-colors outline-none resize-none" required placeholder="Ej: Necesito 20 uniformes para mi equipo de fútbol, colores rojo y negro. ¿Qué precio tendría?"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-secondary hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex justify-center items-center gap-2">
-                                <i class="fa-regular fa-paper-plane"></i> Enviar Mensaje
+
+                            <button type="submit" class="w-full bg-secondary hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex justify-center items-center gap-2 mt-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Cotizar por WhatsApp
                             </button>
                         </div>
                         <div id="form-exito" class="hidden mt-4 p-3 bg-green-100 text-green-700 rounded-md text-sm text-center">
-                            ¡Gracias! Hemos recibido tu mensaje, te contactaremos pronto.
+                            ¡Perfecto! Abriendo WhatsApp con los datos de tu cotización...
                         </div>
                     </form>
                 </div>
@@ -387,28 +426,32 @@
             });
         });
 
-        // Simular envío de formulario
+        // Enviar formulario a WhatsApp
         function enviarMensaje(e) {
             e.preventDefault();
-            const formExito = document.getElementById('form-exito');
-            const btnSubmit = e.target.querySelector('button[type="submit"]');
             
-            // Simular carga
-            const btnOriginalText = btnSubmit.innerHTML;
-            btnSubmit.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
-            btnSubmit.disabled = true;
-
+            // 1. Obtener los datos que escribió el cliente
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const servicio = document.getElementById('servicio').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const mensajeInput = document.getElementById('mensaje').value;
+            
+            // 2. Crear el texto formateado que te llegará al WhatsApp
+            const textoWhatsApp = `¡Hola! Vengo desde la página web y quiero cotizar:%0A%0A👤 *Nombre:* ${nombre}%0A📱 *Teléfono:* ${telefono}%0A🎯 *Me interesa:* ${servicio}%0A🔢 *Cantidad aprox:* ${cantidad}%0A%0A📝 *Detalles de mi idea:* ${mensajeInput}`;
+            
+            // 3. Abrir la pestaña de WhatsApp con los datos
+            window.open(`https://wa.me/593980544824?text=${textoWhatsApp}`, '_blank');
+            
+            // 4. Mostrar mensaje de éxito en la web y limpiar las casillas
+            const formExito = document.getElementById('form-exito');
+            formExito.classList.remove('hidden');
+            e.target.reset();
+            
+            // Ocultar mensaje de éxito después de 4 segundos
             setTimeout(() => {
-                formExito.classList.remove('hidden');
-                e.target.reset();
-                btnSubmit.innerHTML = btnOriginalText;
-                btnSubmit.disabled = false;
-                
-                // Ocultar mensaje después de unos segundos
-                setTimeout(() => {
-                    formExito.classList.add('hidden');
-                }, 4000);
-            }, 1500);
+                formExito.classList.add('hidden');
+            }, 4000);
         }
     </script>
 </body>
