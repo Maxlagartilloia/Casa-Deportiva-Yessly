@@ -46,10 +46,11 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md border-b border-gray-100" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
-                    <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+            <div class="flex justify-between py-2 md:py-3 items-center min-h-[5rem]">
+                <!-- Logo Ajustado y mucho más visible -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Se usa w-44 para celular y w-64 para PC. mix-blend-multiply vuelve el fondo de tu logo transparente -->
+                    <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="w-44 md:w-64 lg:w-72 h-auto object-contain mix-blend-multiply" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -66,7 +67,7 @@
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-secondary focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                        <i class="fa-solid fa-bars text-3xl"></i>
                     </button>
                 </div>
             </div>
@@ -92,7 +93,7 @@
         <!-- Contenedor del texto: Alineado a la izquierda y restringido en ancho -->
         <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center">
             <!-- max-w-xl asegura que el texto jamás pase de la mitad de la pantalla, dejando la foto libre -->
-            <div class="w-full md:w-3/5 lg:w-1/2 md:pr-10 text-center md:text-left mt-20 md:mt-0">
+            <div class="w-full md:w-3/5 lg:w-1/2 md:pr-10 text-center md:text-left mt-24 md:mt-16">
                 <span class="text-secondary font-bold tracking-[0.2em] uppercase mb-4 block text-sm">Calidad y Pasión por el Deporte</span>
                 
                 <h1 class="font-extrabold text-white leading-tight mb-6">
@@ -128,7 +129,6 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Servicio 1 -->
                 <div class="group bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-100">
-                    <!-- Cambiamos object-cover por object-contain y añadimos p-4 para enmarcar -->
                     <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-50 p-4 flex items-center justify-center">
                         <img src="uniforme-deportivo.jpg" onerror="this.src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80'" alt="Uniformes Deportivos" class="w-full h-full object-contain img-hover-zoom">
                         <div class="absolute top-4 right-4 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-secondary">
@@ -395,8 +395,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                 <div>
                     <div class="flex items-center mb-6">
-                        <!-- Logo en el Footer (con un fondo blanco redondeado para que resalte en el fondo oscuro) -->
-                        <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="h-16 md:h-20 w-auto object-contain bg-white px-3 py-2 rounded-xl" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                        <!-- Logo en el Footer también más grande y limpio -->
+                        <div class="bg-white p-3 rounded-2xl inline-flex items-center justify-center">
+                            <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="w-48 md:w-60 h-auto object-contain mix-blend-multiply" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                        </div>
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed pr-4">
                         Vistiendo la pasión del deporte en Shushufindi. Calidad garantizada en confección, sublimación y artículos deportivos.
