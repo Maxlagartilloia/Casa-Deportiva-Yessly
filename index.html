@@ -48,9 +48,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <i class="fa-solid fa-trophy text-secondary text-3xl"></i>
-                    <span class="font-bold text-2xl text-primary tracking-tight">C.D. YESSLY</span>
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
+                    <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -129,9 +128,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Servicio 1 -->
                 <div class="group bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-100">
-                    <!-- Cambiamos h-64 por h-80 en móviles y h-96 en PC para hacerlas mucho más altas -->
-                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-100">
-                        <img src="uniforme-deportivo.jpg" onerror="this.src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80'" alt="Uniformes Deportivos" class="w-full h-full object-cover img-hover-zoom">
+                    <!-- Cambiamos object-cover por object-contain y añadimos p-4 para enmarcar -->
+                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-50 p-4 flex items-center justify-center">
+                        <img src="uniforme-deportivo.jpg" onerror="this.src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80'" alt="Uniformes Deportivos" class="w-full h-full object-contain img-hover-zoom">
                         <div class="absolute top-4 right-4 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-secondary">
                             <i class="fa-solid fa-shirt text-xl"></i>
                         </div>
@@ -144,9 +143,8 @@
 
                 <!-- Servicio 2 -->
                 <div class="group bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-100">
-                    <!-- Cambiamos h-64 por h-80 en móviles y h-96 en PC -->
-                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-100">
-                        <img src="uniforme-escolar.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80'" alt="Uniformes Escolares" class="w-full h-full object-cover img-hover-zoom">
+                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-50 p-4 flex items-center justify-center">
+                        <img src="uniforme-escolar.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80'" alt="Uniformes Escolares" class="w-full h-full object-contain img-hover-zoom">
                         <div class="absolute top-4 right-4 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-secondary">
                             <i class="fa-solid fa-graduation-cap text-xl"></i>
                         </div>
@@ -159,9 +157,8 @@
 
                 <!-- Servicio 3 -->
                 <div class="group bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-100">
-                    <!-- Cambiamos h-64 por h-80 en móviles y h-96 en PC -->
-                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-100">
-                        <img src="sublimacion.jpg" onerror="this.src='https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80'" alt="Sublimación" class="w-full h-full object-cover img-hover-zoom">
+                    <div class="relative h-80 lg:h-96 overflow-hidden bg-gray-50 p-4 flex items-center justify-center">
+                        <img src="sublimacion.jpg" onerror="this.src='https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80'" alt="Sublimación" class="w-full h-full object-contain img-hover-zoom">
                         <div class="absolute top-4 right-4 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-secondary">
                             <i class="fa-solid fa-print text-xl"></i>
                         </div>
@@ -193,8 +190,8 @@
                 
                 <!-- Producto 1 -->
                 <div class="bg-white rounded-xl p-5 shadow-sm text-center group cursor-pointer hover:shadow-lg transition-all border border-gray-100">
-                    <div class="aspect-square bg-gray-100 rounded-lg mb-5 overflow-hidden">
-                        <img src="balones.jpg" onerror="this.src='https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&q=80'" alt="Balones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="aspect-square bg-white border border-gray-100 rounded-lg mb-5 overflow-hidden p-2 flex items-center justify-center">
+                        <img src="balones.jpg" onerror="this.src='https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&q=80'" alt="Balones" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="font-bold text-lg text-primary">Balones</h4>
                     <p class="text-sm text-gray-500 mt-1">Fútbol, básquet, indor</p>
@@ -202,8 +199,8 @@
 
                 <!-- Producto 2 -->
                 <div class="bg-white rounded-xl p-5 shadow-sm text-center group cursor-pointer hover:shadow-lg transition-all border border-gray-100">
-                    <div class="aspect-square bg-gray-100 rounded-lg mb-5 overflow-hidden">
-                        <img src="canilleras.jpg" onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80'" alt="Canilleras" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="aspect-square bg-white border border-gray-100 rounded-lg mb-5 overflow-hidden p-2 flex items-center justify-center">
+                        <img src="canilleras.jpg" onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80'" alt="Canilleras" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="font-bold text-lg text-primary">Canilleras</h4>
                     <p class="text-sm text-gray-500 mt-1">Protección garantizada</p>
@@ -211,8 +208,8 @@
 
                 <!-- Producto 3 -->
                 <div class="bg-white rounded-xl p-5 shadow-sm text-center group cursor-pointer hover:shadow-lg transition-all border border-gray-100">
-                    <div class="aspect-square bg-gray-100 rounded-lg mb-5 overflow-hidden">
-                        <img src="polines.jpg" onerror="this.src='https://images.unsplash.com/photo-1608223689714-c10022d861d8?auto=format&fit=crop&q=80'" alt="Polines" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="aspect-square bg-white border border-gray-100 rounded-lg mb-5 overflow-hidden p-2 flex items-center justify-center">
+                        <img src="polines.jpg" onerror="this.src='https://images.unsplash.com/photo-1608223689714-c10022d861d8?auto=format&fit=crop&q=80'" alt="Polines" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="font-bold text-lg text-primary">Polines</h4>
                     <p class="text-sm text-gray-500 mt-1">Varios colores y tallas</p>
@@ -220,8 +217,8 @@
 
                 <!-- Producto 4 -->
                 <div class="bg-white rounded-xl p-5 shadow-sm text-center group cursor-pointer hover:shadow-lg transition-all border border-gray-100">
-                    <div class="aspect-square bg-gray-100 rounded-lg mb-5 overflow-hidden">
-                        <img src="guantes.jpg" onerror="this.src='https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80'" alt="Guantes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="aspect-square bg-white border border-gray-100 rounded-lg mb-5 overflow-hidden p-2 flex items-center justify-center">
+                        <img src="guantes.jpg" onerror="this.src='https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80'" alt="Guantes" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="font-bold text-lg text-primary">Guantes</h4>
                     <p class="text-sm text-gray-500 mt-1">Para arqueros y más</p>
@@ -397,9 +394,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                 <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <i class="fa-solid fa-trophy text-secondary text-2xl"></i>
-                        <span class="font-bold text-2xl text-white tracking-tight">C.D. YESSLY</span>
+                    <div class="flex items-center mb-6">
+                        <!-- Logo en el Footer (con un fondo blanco redondeado para que resalte en el fondo oscuro) -->
+                        <img src="logo.jpg" alt="Logo Casa Deportiva Yessly" class="h-16 md:h-20 w-auto object-contain bg-white px-3 py-2 rounded-xl" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed pr-4">
                         Vistiendo la pasión del deporte en Shushufindi. Calidad garantizada en confección, sublimación y artículos deportivos.
