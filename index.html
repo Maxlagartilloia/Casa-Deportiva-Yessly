@@ -41,16 +41,16 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 antialiased bg-light">
+<body class="font-sans text-gray-800 antialiased bg-light pt-20 md:pt-24">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md border-b border-gray-100" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between py-2 md:py-3 items-center min-h-[5rem]">
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md border-b border-gray-100 h-20 md:h-24" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
                 <!-- Logo Ajustado y mucho más visible -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <!-- Se usa logo.png y se eliminó mix-blend-multiply porque ya es transparente -->
-                    <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="w-44 md:w-64 lg:w-72 h-auto object-contain drop-shadow-sm transition-transform hover:scale-105" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                    <!-- Se restringe la altura (h) en lugar del ancho (w) para que la barra blanca quede delgada y pegada -->
+                    <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="h-12 md:h-16 lg:h-18 w-auto object-contain drop-shadow-sm transition-transform hover:scale-105" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -85,7 +85,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative h-screen flex items-center overflow-hidden">
+    <section id="inicio" class="relative h-[calc(100vh-5rem)] md:h-[calc(100vh-6rem)] flex items-center overflow-hidden">
         <!-- Imagen de fondo que se espera en la raíz. -->
         <img src="hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1518605368461-1ee7e162528b?auto=format&fit=crop&q=80'" alt="Deportes Yessly Fondo" class="absolute inset-0 w-full h-full object-cover object-top z-0" />
         <div class="absolute inset-0 hero-overlay z-10"></div>
@@ -93,7 +93,7 @@
         <!-- Contenedor del texto: Alineado a la izquierda y restringido en ancho -->
         <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center">
             <!-- max-w-xl asegura que el texto jamás pase de la mitad de la pantalla, dejando la foto libre -->
-            <div class="w-full md:w-3/5 lg:w-1/2 md:pr-10 text-center md:text-left mt-24 md:mt-16">
+            <div class="w-full md:w-3/5 lg:w-1/2 md:pr-10 text-center md:text-left">
                 <span class="text-secondary font-bold tracking-[0.2em] uppercase mb-4 block text-sm">Calidad y Pasión por el Deporte</span>
                 
                 <h1 class="font-extrabold text-white leading-tight mb-6">
@@ -397,7 +397,7 @@
                     <div class="flex items-center mb-6">
                         <!-- Logo en el Footer: Mantenemos la caja blanca para que el texto negro del logo no se pierda en el fondo oscuro -->
                         <div class="bg-white p-3.5 rounded-2xl inline-flex items-center justify-center shadow-lg">
-                            <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="w-48 md:w-60 h-auto object-contain" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
+                            <img src="logo.png" alt="Logo Casa Deportiva Yessly" class="h-16 md:h-20 w-auto object-contain" onerror="this.src='https://via.placeholder.com/200x60/ffffff/dc2626?text=C.D.+YESSLY'">
                         </div>
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed pr-4">
